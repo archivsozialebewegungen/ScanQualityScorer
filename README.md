@@ -17,6 +17,7 @@ Create and activate a virtual environment:
     
 Install requirements:
 
+    pip3 install wheel
     pip3 install -r requirements.txt
 
 ## Execution
@@ -24,3 +25,13 @@ Install requirements:
 Just run <code>ScanQualityScorer.sh</code> in the <code>bin</code> directory with the graphical image file as parameter:
 
 	ScanQualityScorer.sh my_text_file.jpg
+	
+## Using the <code>textract</code> wrapper
+
+There is an Extractor module that uses <code>textract</code> to extract text from a given file. Usage is simple:
+
+    from Asb.Extractor import process
+    
+    text, score = process("test.tif")
+
+If the file is not a graphic file, the score value is <code>None</code>.

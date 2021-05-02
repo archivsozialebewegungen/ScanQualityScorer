@@ -7,6 +7,7 @@ from xml.dom.minidom import Element, parseString
 import pytesseract
 import sys
 from PIL import Image
+import textract
 
 class StringObject:
     '''
